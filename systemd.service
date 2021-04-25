@@ -5,7 +5,7 @@ Before=network.target
 [Service]
 Type=oneshot
 TTYPath=/dev/console
-ExecStart=/root/myprog
+ExecStart=/root/sysprep
 StandardInput=tty
 
 [Install]
