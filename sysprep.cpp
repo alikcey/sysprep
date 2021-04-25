@@ -96,6 +96,13 @@ int set_hostname(string hostname){
         	hosts_file << "127.0.1.1" << '\t' << FQDN << '\t' << newhostname << endl;
         	}
 
+	string ipv6_defaults =
+	"\n# The following lines are desirable for IPv6 capable hosts\n"
+	"::1     localhost ip6-localhost ip6-loopback\n"
+	"ff02::1 ip6-allnodes\n"
+	"ff02::2 ip6-allrouters\n";
+	hosts_file << ipv6_defaults << endl;
+
 	hosts_file.close();
 	return 0;
 	}
